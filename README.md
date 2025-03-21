@@ -32,7 +32,6 @@ void encryptRailFence(char *plaintext, int rails, char *ciphertext) {
         for (int j = 0; j < len; j++)
             if (rail[i][j] != '\n')
                 ciphertext[index++] = rail[i][j];
-
     ciphertext[index] = '\0'; // Null terminate
 }
 int main() {
@@ -40,7 +39,7 @@ int main() {
     int rails;
     printf("Enter plaintext: ");
     fgets(plaintext, sizeof(plaintext), stdin);
-    plaintext[strcspn(plaintext, "\n")] = '\0'; // Remove newline
+    plaintext[strcspn(plaintext, "\n")] = '\0'; 
     printf("Enter number of rails: ");
     scanf("%d", &rails);
     encryptRailFence(plaintext, rails, ciphertext);
@@ -55,4 +54,4 @@ int main() {
 
 
 ## RESULT:
-The program is executed successfully
+The program is executed successfully.
