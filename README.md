@@ -25,15 +25,13 @@ void encryptRailFence(char *plaintext, int rails, char *ciphertext) {
     for (int i = 0; i < len; i++) {
         rail[row][i] = plaintext[i];
         row += dir;
-        if (row == rails - 1 || row == 0) dir *= -1; // Change direction at edges
-    }
+        if (row == rails - 1 || row == 0) dir *= -1;  }
     int index = 0;
     for (int i = 0; i < rails; i++)
         for (int j = 0; j < len; j++)
             if (rail[i][j] != '\n')
                 ciphertext[index++] = rail[i][j];
-    ciphertext[index] = '\0'; // Null terminate
-}
+    ciphertext[index] = '\0';  }
 int main() {
     char plaintext[100], ciphertext[100], decryptedText[100];
     int rails;
@@ -46,7 +44,6 @@ int main() {
     printf("Encrypted Text: %s\n", ciphertext);
     return 0;
 }
-
 ```
 
 ## OUTPUT:
